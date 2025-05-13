@@ -97,7 +97,7 @@ http://localhost:5173/
 
 ## Deployment
 
-The project is configured for easy deployment on various platforms:
+The project is configured for easy deployment on Vercel:
 
 ### Building for Production
 
@@ -107,11 +107,41 @@ npm run build
 
 This will create a production-ready build in the `dist` directory.
 
-### Deploying to Netlify
+### Deploying to Vercel
 
-1. Connect your GitHub repository to Netlify
-2. Set the build command to `npm run build`
-3. Set the publish directory to `dist`
+1. Install Vercel CLI (optional):
+```sh
+npm install -g vercel
+```
+
+2. Deploy with Vercel:
+
+#### Option 1: Connect to GitHub repository
+1. Push your code to GitHub
+2. Import your GitHub repository in Vercel dashboard
+3. Vercel will automatically detect the project settings and build configuration
+
+#### Option 2: Deploy using Vercel CLI
+```sh
+vercel
+```
+
+Follow the prompts to complete the deployment.
+
+#### Option 3: Manual deployment
+1. Sign up/login to Vercel
+2. Create a new project
+3. Import your code repository
+4. Configure the following settings:
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Framework Preset: Vite
+
+Vercel will automatically deploy your application and provide a unique URL.
+
+## Environment Variables
+
+If your application requires environment variables, you can configure them in the Vercel dashboard under your project settings.
 
 ## Extending the Project
 
